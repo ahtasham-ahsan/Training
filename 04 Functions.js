@@ -37,3 +37,7 @@ function r(i){
 for (let index = 0; index < 5; index++) {  
     r(index);
 }
+
+
+// Higher order functions
+// functions that another function as an argument or a function that returns another function is HOF

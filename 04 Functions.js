@@ -41,3 +41,36 @@ for (let index = 0; index < 5; index++) {
 
 // Higher order functions
 // functions that another function as an argument or a function that returns another function is HOF
+
+
+const multiplyBy = function(num1){
+    return function(num2){
+        return num1*num2;
+    }
+}
+
+const multiplyByTwo = multiplyBy(2);
+const multiplyByFive = multiplyBy(5);
+console.log(multiplyByTwo(3));
+console.log(multiplyByTwo(4));
+console.log(multiplyByTwo(5));
+console.log(multiplyByTwo(7));
+
+console.log(multiplyByFive(4));
+console.log(multiplyByFive(10));
+console.log(multiplyByFive(2));
+console.log(multiplyByFive(8));
+console.log(multiplyByFive(7));
+
+const multiplyByUsingArrowFunc = (num1) =>  (num2) => num1*num2;
+
+const multiplyByTwoUsing_Arrow_Functions = multiplyByUsingArrowFunc(2);
+const multiplyByFive_Using_Arrow_Functions = multiplyByUsingArrowFunc(5);
+console.log(multiplyByTwoUsing_Arrow_Functions(3));
+console.log(multiplyByTwoUsing_Arrow_Functions(4));
+
+
+console.log(multiplyByFive_Using_Arrow_Functions(4));
+console.log(multiplyByFive_Using_Arrow_Functions(10));
+
+console.log(multiplyByUsingArrowFunc(4)(90));

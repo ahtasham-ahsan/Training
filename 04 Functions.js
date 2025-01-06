@@ -20,3 +20,20 @@ function rrr(){
 
 console.log(rrr())
 rrr()();
+
+
+
+// Thing to take care of when declaring fucntions
+for (let index = 0; index < 5; index++) {
+    function a(i){
+        console.log("Initializing the function ",i, "th time.")
+    }    
+    a(index);
+}
+function r(i){
+    console.log("Initialized the function only one time ");
+    console.log("and executing it ",i , "th time");
+}  
+for (let index = 0; index < 5; index++) {  
+    r(index);
+}

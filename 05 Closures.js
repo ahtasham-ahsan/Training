@@ -59,3 +59,27 @@ getHeavyDuty(122);
 getHeavyDuty(211);
 getHeavyDuty(322);
 getHeavyDuty(433);
+
+
+// Closures help us to encapsulate the data 
+function initialize(){
+    // called has been encapsulated 
+    let called = 0;
+    return function(){
+        if (called==0) {
+            const view = '🥳';
+            console.log('View has been created', view);
+            called++;
+        }
+        else{
+            console.log('Called again that is not allowed');
+            return;
+        }
+    }
+}
+const InitializeOnce = initialize()
+InitializeOnce()
+InitializeOnce()
+InitializeOnce()
+InitializeOnce()
+InitializeOnce()

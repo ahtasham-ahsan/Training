@@ -1,7 +1,4 @@
-
-
-
-
+// 72 - Closures
 
 
 // function loop() {

@@ -1,3 +1,7 @@
+// Closures are 
+// --> Memory Effecient 
+// --> Encapsulation
+
 function a(){
     let grandPa = 'Dada';
     return function b(){
@@ -30,3 +34,28 @@ function MayBeCallMe(){
      const hello = 'Hello';
 }
 MayBeCallMe();
+
+// Closures are memory effecients 
+
+function heavyDuty(idx){
+    const bigArray = new Array(70000).fill('🥹');
+    console.log('Created');
+    return bigArray[idx];
+}
+heavyDuty(800);
+heavyDuty(821);
+heavyDuty(832);
+
+function heavyDuty2(){
+    const bigArray = new Array(70000).fill('🥹');
+    console.log('Created a closure and saved the memory');
+    return function(idx){
+        return bigArray[idx]
+    }
+}
+
+const getHeavyDuty = heavyDuty2()
+getHeavyDuty(122);
+getHeavyDuty(211);
+getHeavyDuty(322);
+getHeavyDuty(433);

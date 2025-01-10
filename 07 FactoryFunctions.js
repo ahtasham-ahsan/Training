@@ -1,4 +1,5 @@
-
+// Programming paradigms are how we write/organize our code 
+// OOP and FP is Programming Paradigms 
 const elf = {
     name: 'Orwell', 
     weapon: 'Bow', 
@@ -34,3 +35,6 @@ console.log(peter.attack());
 
 const sam = createElf('Sam', 'Sword')
 console.log(sam.attack());
+
+
+// 

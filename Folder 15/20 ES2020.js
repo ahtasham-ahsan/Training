@@ -1,3 +1,4 @@
+
 // ES 2020
 // Big Int
 
@@ -20,7 +21,8 @@ let andrei_pokemon = {
     raichu: {
         specie: 'Mouse Pokemon',
         height: 0.9,
-        weight: 20
+        weight: 20, 
+        power: 'lightening'
     }
 }
 
@@ -35,3 +37,12 @@ else{
 // ----- this can be done by chaining operator '?'
 let weight3 = andrei_pokemon?.pikachu?.weight
 console.log(weight3);
+
+// Nulling coalesing operator ??
+
+let power = will_pokemon?.pikachu?.power || 'no power'
+console.log(power)
+
+
+let power1 = will_pokemon?.pikachu?.power ?? 'no power' // used instead of or operator
+console.log(power)

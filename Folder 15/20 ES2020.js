@@ -46,3 +46,7 @@ console.log(power)
 
 let power1 = will_pokemon?.pikachu?.power ?? 'no power' // used instead of or operator
 console.log(power)
+
+
+// Global this
+// it works outside the brwoser as well

@@ -1,0 +1,19 @@
+Composition vs Inheritance 
+
+
+OOP Strengths
+Intuitive for real-world modeling.
+Encourages encapsulation, making systems modular.
+Polymorphism supports dynamic behavior in a hierarchy.
+OOP Weaknesses
+Tight coupling through inheritance can make systems rigid.
+Shared mutable state can lead to bugs and side effects.
+Overengineering through excessive abstraction.
+FP Strengths
+Predictable and bug-free code due to immutability and pure functions.
+Functions are reusable and composable.
+Works well with parallelism and concurrency.
+FP Weaknesses
+Immutability can lead to performance overhead due to frequent copying of data.
+Abstract concepts like closures, currying, and monads can be hard to grasp.
+Debugging can be challenging in heavily composed functional pipelines.

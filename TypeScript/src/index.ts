@@ -36,4 +36,9 @@ const medium = 3;
 enum Size { Small =1, Medium = 2, Larger = 3};
 
 let my_Size: Size = Size.Medium;
-console.log(my_Size)
+console.log(my_Size);
+
+// Functions in TypeScript
+function Calculate_Tax(income: number): number{
+    return income;
+}

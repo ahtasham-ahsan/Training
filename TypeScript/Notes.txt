@@ -20,3 +20,10 @@ Drawbacks:
         We have to give our code to the type Script compiler that converts our ts code to javascript code
 
 - Discipline in Code
+
+
+Compilation of Code
+- command: tsc file.ts
+
+Create Configrations 
+- command: tsc --init 

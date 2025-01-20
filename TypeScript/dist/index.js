@@ -35,4 +35,25 @@ var Size;
 ;
 var my_Size = Size.Medium;
 console.log(my_Size);
+// Functions in TypeScript
+function Calculate_Tax(income) {
+    return income;
+}
+// Objects in TS
+var user1 = { id: 1 };
+user1.name = 'Ahtasham';
+var user2 = {
+    name: 'Ahtasham',
+    id: 1080,
+    happy: true
+};
+// Narrowing Type
+function Calculate_Weight(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
 //# sourceMappingURL=index.js.map

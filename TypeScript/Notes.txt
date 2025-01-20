@@ -44,3 +44,9 @@ Types in TypeScript
 - Tuples
 
 
+- Type Aliases
+- Unions and Intersections
+- Type Narrowing
+- Nullable Types
+- Unknow Type 
+- Never Type 

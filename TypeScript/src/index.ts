@@ -52,3 +52,28 @@ let user1: {
 } = { id : 1};
 
 user1.name = 'Ahtasham'
+
+// Type Aliases
+// Declaring A Custom Data Type
+
+type Employee = {
+    name: string, 
+    id: number, 
+    happy: boolean
+}
+
+let user2 : Employee = {
+    name: 'Ahtasham', 
+    id: 1080, 
+    happy: true
+}
+
+// Narrowing Type
+function Calculate_Weight(weight: number | string){
+    if(typeof weight === 'number'){
+        return weight*2.2;
+    }
+    else{
+        return parseInt(weight)*2.2;
+    }
+}

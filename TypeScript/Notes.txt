@@ -27,3 +27,19 @@ Compilation of Code
 
 Create Configrations 
 - command: tsc --init 
+
+Types in javascript
+- Numbers
+- Strings
+- Boolean 
+- Null 
+- Undefined
+- Objects
+
+Types in TypeScript
+- any 
+- unknown 
+- never
+- enum
+- Tuples
+

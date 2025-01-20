@@ -77,3 +77,19 @@ function Calculate_Weight(weight: number | string){
         return parseInt(weight)*2.2;
     }
 }
+
+// Literal Type
+// We want a variable to have limited assigns like a variable we want to have only value of 50 or 100
+
+let quantity : 50 | 100 = 50;
+ 
+// Nullable Types
+function greet(name: string | null){
+    if(name){
+        console.log(name.toUpperCase());
+    }   else{
+        console.log('Hola');
+    } 
+}
+// greet(null) ==> allowed in JS
+greet(null);

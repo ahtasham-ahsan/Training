@@ -1,0 +1,22 @@
+Benifits of Type Script 
+- Static Typing
+- Code Completion
+- Refactoring
+- ShortHand Notation
+
+Type Script - Static Typed Language (Static type Language know before the runtime the type of the variable. Dynamic Typed Languages like python donot know about it on the compilation time).
+
+for example - Dynamic Typed 
+let a= 10;
+a = 'type changed'
+
+Static Typed
+let a: number = 10;
+a= 'not allowed to change the type
+
+
+Drawbacks:
+- Transpilation 
+        We have to give our code to the type Script compiler that converts our ts code to javascript code
+
+- Discipline in Code

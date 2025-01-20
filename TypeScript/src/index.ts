@@ -42,3 +42,13 @@ console.log(my_Size);
 function Calculate_Tax(income: number): number{
     return income;
 }
+
+
+// Objects in TS
+let user1: {
+    readonly id: number, // Cannot be Modified later in the code;
+    name?: string, 
+    retire?: (date : Date) => void // Method that is returning void
+} = { id : 1};
+
+user1.name = 'Ahtasham'

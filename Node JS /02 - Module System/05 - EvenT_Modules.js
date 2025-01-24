@@ -2,14 +2,17 @@
 
 // this event emitter is a class
 const Event_Emitter = require('events');
+const emitter = new Event_Emitter();
 
 // Register  a listner
-emitter.on('Message_Logged', function(){
-    console.log('Listener Called');
+emitter.on('Message_Logged', function(args){
+    console.log('Listener Called', args);
 });
 
 // Order is important
 
-const emitter = new Event_Emitter();
 // Raised an event 
-emitter.emit('Message_Logged');
+emitter.emit('Message_Logged', {
+    id: 1, 
+    message: 'Passing arguments in an object'
+});

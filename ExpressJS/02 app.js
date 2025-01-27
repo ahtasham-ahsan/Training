@@ -1,4 +1,5 @@
 const  express = require('express');
+const Joi = require('joi');
 const app = express(); // returns a function
 
 app.use(express.json());
@@ -26,6 +27,13 @@ app.get('/api/courses', (req, res) => {
 // Routes
 app.get('/api/courses/:id', (req, res)=>{
     // res.send(req.params.id);
+
+    const schema = {
+        name: Joi.string().min(3).required()
+    }
+    const results = Joi.validate(req.body, schema)
+    console.log(results);
+    
     const course =courses.find(c => c.id === parseInt(req.params.id))
     if(!course) //404
     {
@@ -41,6 +49,12 @@ app.get('/api/:posts/:months', (req, res)=>{
 });
 
 app.post('/api/courses', (req, res)=> {
+    
+    if(!req.body.name || req.body.name.length<3){
+        req.status(400).send('Name is required and should be minimum 4 characters');
+        return;
+    }
+    
     const course = {
         id: courses.length + 1, 
         name: req.body.name

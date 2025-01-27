@@ -54,11 +54,11 @@ app.get('/api/genres/:id', (req, res) => {
 });
 
 function validateGenre(genre) {
-  const schema = {
+  const schema = Joi.object({
     name: Joi.string().min(3).required()
-  };
+  });
 
-  return Joi.validate(genre, schema);
+  return schema.validate(genre);
 }
 
 const port = process.env.PORT || 3000;

@@ -15,6 +15,16 @@ app.get('/api/courses', (req, res) => {
     // res.send([2,3,4]);
 });
 
+// Routes
+app.get('/api/courses/:id', (req, res)=>{
+    res.send(req.params.id);
+});
+// Multiple Params
+app.get('/api/:posts/:months', (req, res)=>{
+    res.send(req.params);
+});
+
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, ()=> {

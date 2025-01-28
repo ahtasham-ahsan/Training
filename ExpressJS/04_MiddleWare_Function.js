@@ -1,4 +1,6 @@
 const Joi = require('joi');
+const morgan = require('morgan');
+const helmet = require('helmet');
 const express = require('express');
 const app = express();
 
@@ -15,6 +17,9 @@ app.use(express.urlencoded({extended: true})); // Help us in making key value pa
 // static - serves static files
 app.use(express.static('Folder_Name'));
 
+//  Third Party Middlewares
+app.use(morgan('tiny'));
+app.use(helmet());
 
 // Writing Custom Middleware functions 
 app.use(function (req, res, next){

@@ -29,3 +29,22 @@ function get_User(id, call_Back) {
 
 // Promises
 
+const p = new Promise((resolve, reject) => {
+    // Async Work
+    setTimeout(() => {
+        resolve(1);
+        // reject(new Error('Error Bro'));
+    }, 2000);
+
+    // reject(0);
+}); 
+p.then(
+    (res) => {
+        return res+2;
+    }
+)
+.then(res => {
+    return res + 11;
+})
+.then(res => console.log(res))
+.catch(err => console.log(err.message));

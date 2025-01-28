@@ -5,6 +5,11 @@ const app = express();
 console.log(`Node_Env : ${process.env.NODE_ENV}`);
 console.log("If not set, it will by default send the", app.get('env'), "environment");
 
+if(app.get('env') === 'development'){
+    console.log('Development Environment Enabled');
+}else{
+    console.log(`${app.get('env')} is Enabled`);
+}
 
 const courses = [
     {id: 1,name: 'React JS'},

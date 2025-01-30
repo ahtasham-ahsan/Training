@@ -62,21 +62,21 @@ const user_Schema = new mongoose.Schema({
   }
 });
 
-// const user = mongoose.model("User", user_Schema); // User is the name of the collection
+const user = mongoose.model("User", user_Schema); // User is the name of the collection
 
-// const new_User = new user({
-//   name: "Ahtasham",
-//   email: "ahtasham@gmail.com",
-//   age: 22,
-// });
-// new_User
-//   .save()
-//   .then(() => {
-//     console.log("User added");
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+const new_User = new user({
+  name: "Ahtasham",
+  email: "ahtasham@gmail.com",
+  age: 22,
+});
+new_User
+  .save()
+  .then(() => {
+    console.log("User added");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // async function run() {
 //   const newUSER = new user({

@@ -93,6 +93,17 @@ new_User
 // run();
 
 async function get_User() {
+    /*
+        Comparision Query Operators
+        gt --> greater than
+        gte --> greater than or equal to
+        lt --> less than
+        lte --> less than or equal to
+        eq --> equal to
+        ne --> not equal to
+        in --> in
+        nin --> not in
+    */
   const users = await user.find({ name: "Ahtasham", age: 22 })
   .limit(1)
   .sort({ name: 1 })

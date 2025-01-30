@@ -47,11 +47,13 @@
 //     console.log(`Example app listening at http://localhost:${port}`);
 // });
 
+const e = require("express");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/test", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect("mongodb://localhost:27017/test", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+mongoose.connect('mongodb://localhost:27017/playground');
 const user_Schema = new mongoose.Schema({
   name: String,
   email: String,
@@ -89,3 +91,12 @@ new_User
 // }
 
 // run();
+
+async function get_User() {
+  const users = await user.find({ name: "Ahtasham", age: 22 })
+  .limit(1)
+  .sort({ name: 1 })
+  .select({ email: 1 });
+  console.log(users);
+}
+get_User();

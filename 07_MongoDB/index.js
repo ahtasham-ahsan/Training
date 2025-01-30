@@ -118,3 +118,9 @@ async function logical_Operators() {
     console.log(find_User);
 }
 logical_Operators();
+
+async function regular_Expression() {
+    const find_User = await user.find({ name: /^A/ });
+    console.log(find_User);
+}
+regular_Expression();

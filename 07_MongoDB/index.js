@@ -111,3 +111,10 @@ async function get_User() {
   console.log(users);
 }
 get_User();
+
+async function logical_Operators() {
+    // 0r and
+    const find_User = await user.find().or([{ name: "Ahtasham" }, { age: 11 }]);
+    console.log(find_User);
+}
+logical_Operators();

@@ -20,7 +20,15 @@ const Schema = mongoose.Schema({
         // min: 18,
         // max: 65
     },
-    company: String,
+    company: {
+        type: String,
+        validate: {
+            validator: function(v){
+                return v && v.length > 3; // custom validation
+            },
+            message: 'Company name should be greater than 3 characters'
+        }
+    },
     pos: {type: String, required: function(){ // arrow function will not work here
         return this.age > 25;
     }} , 
@@ -36,7 +44,7 @@ async function add_User(name, age, pos, company){
     const user = new model({
         name: name,
         age: age,
-        company: company
+        company: company,
         pos: pos
     })
     try{

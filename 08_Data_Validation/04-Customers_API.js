@@ -33,6 +33,12 @@ app.get('/api/customers', async (req, res) => {
     res.send(customers);
 });
 
+app.get('/api/customers/:id', async (req, res) => {
+    const customer = await Customer.findById(req.params.id);
+    if (!customer) return res.status(404).send('The customer with the given ID was not found');
+    res.send(customer);
+});
+
 app.post('/api/customers', async (req, res) => {
     const customer = new Customer({
         name: req.body.name,

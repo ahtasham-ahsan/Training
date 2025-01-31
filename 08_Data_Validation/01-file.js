@@ -37,7 +37,7 @@ async function add_User(name, age, pos, company){
     const user = new model({
         name: name,
         age: age,
-        company: company
+        company: company,
         pos: pos
     })
     try{

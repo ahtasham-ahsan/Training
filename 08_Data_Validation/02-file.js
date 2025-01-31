@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const express = require('express');
-const { min, max } = require('underscore');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -18,8 +17,8 @@ const Schema = mongoose.Schema({
     },
     age: {
         type: Number,
-        min: 18,
-        max: 65
+        // min: 18,
+        // max: 65
     },
     company: String,
     pos: {type: String, required: function(){ // arrow function will not work here
@@ -60,4 +59,5 @@ app.post('/addUser', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-});
+});const express = require('express');
+const mongoose = require('mongoose');

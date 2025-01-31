@@ -25,14 +25,9 @@ async function add_User(name, age, pos){
         age: age,
         pos: pos
     })
-    await user.save()
-        .then((result) => {
-            console.log(result);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-
+    try{
+       const result =  await user.save();
+        console.log('User Added', result);
 }
 
 app.get('/', (req, res) => {

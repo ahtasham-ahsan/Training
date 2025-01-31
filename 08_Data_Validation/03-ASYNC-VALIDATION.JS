@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost:27017/db', {
 const Schema = mongoose.Schema({
     name: {
         type: String,
+        uppercase: true,
         required: true, 
         minlength: 5,
         maxlength: 50,
@@ -22,6 +23,8 @@ const Schema = mongoose.Schema({
     },
     company: {
         type: String,
+        trim: true, // remove white spaces
+        lowercase: true,
         validate: {
             validator: function(v, callback){
                 setTimeout(() => {

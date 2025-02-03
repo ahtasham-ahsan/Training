@@ -52,6 +52,10 @@ const Course = mongoose.model(
   "Course",
   new mongoose.Schema({
     name: String,
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Author'
+    }
   })
 );
 
@@ -82,4 +86,5 @@ async function list_Courses() {
 }
 
 create_Author("Morris", "My bio", "My Website");
+create_Course("Drupal", "67a09d46c2bd15d65dc7accb");
 app.listen(port, () => console.log(`Listening on port ${port}...`));

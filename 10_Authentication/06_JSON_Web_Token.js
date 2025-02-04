@@ -4,6 +4,17 @@
 // 3- Verified Signature --> Contains the digital signature, if change in the token - signature will also change
 
 const jwt = require("jsonwebtoken");
+const express = require("express");
+const config = require("config");
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(express.json());
+
+if(!config.get("jwtPrivateKey")){
+    console.error("FATAL ERROR: jwtPrivateKey is not defined!");
+    process.exit(1);
+}
+
 
 app.post("/login", async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
@@ -11,6 +22,9 @@ app.post("/login", async (req, res) => {
   if (user.password !== req.body.password)
     return res.status(400).send("Invalid password!");
 
-  const token = jwt.sign({ _id: user._id }, "jwtPrivateToken");
+  const token = jwt.sign({ _id: user._id }, config.get("jwtPrivateKey"));
   res.send("Login successful!", token);
+});
+app.listen(port, () => {
+  console.log("Listening on port: ", port);
 });

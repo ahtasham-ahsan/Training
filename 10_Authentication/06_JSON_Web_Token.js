@@ -15,6 +15,8 @@ if(!config.get("jwtPrivateKey")){
     process.exit(1);
 }
 
+ 
+
 
 app.post("/login", async (req, res) => {
   const user = await User.findOne({ email: req.body.email });

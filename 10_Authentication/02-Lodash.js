@@ -8,6 +8,7 @@ const Joi = require("joi");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const _ = require("lodash");
 
 app.use(express.json());
 mongoose
@@ -68,16 +69,23 @@ app.post("/users", async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (user) return res.status(400).send("User already registered");
 
-  user = new User({
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-  });
+  user = new User(
+    _.pick(req.body, ["name", "email", "password"])
+    // {
+    // name: req.body.name,
+    // email: req.body.email,
+    // password: req.body.password,
+    //   }
+  );
   await user.save();
-  res.send({
-    name: user.name,
-    email: user.email
-  }); // One way of hiding password from user.
+
+  //   _.pick(user, ['name', 'email']);
+
+  res.send(_.pick(user, ["name", "email", "_id"]));
+  //   res.send({
+  //     name: user.name,
+  //     email: user.email
+  //   }); // One way of hiding password from user.
 });
 
 const port = process.env.PORT || 3000;

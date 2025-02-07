@@ -5,6 +5,10 @@ const port = process.env.PORT || 3000;
 const winston = require("winston");
 require("winston-mongodb");
 
+process.on("uncaughtException", (ex) => {
+  winston.error(ex.message);
+});
+
 app.use(express.json());
 mongoose.connect("mongodb://localhost:27018/Tester");
 

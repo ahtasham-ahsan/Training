@@ -1,7 +1,16 @@
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
-test("Test Name that is Shown on Console", () => {});
+const lib = require("../lib");
+
+test("absolute function for Pos Values", () => {
+  const result = lib.absolute(1);
+  expect(result).toBe(1); // Matcher Functions
+});
+
+test("absolute function for Neg Values", () => {
+  const result = lib.absolute(-1);
+  expect(result).toBe(1); // Matcher Functions
+});
+
+test("absolute function for Zero", () => {
+  const result = lib.absolute(0);
+  expect(result).toBe(0); // Matcher Functions
+});

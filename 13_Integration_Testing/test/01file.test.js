@@ -38,4 +38,11 @@ describe("apis testing", () => {
       expect(resp.status).toBe(404);
     });
   });
+
+  describe("Post", () => {
+    it("should return 401 if users is not logged in ", async()=>{
+      const res = await request(server).post("/user").send({name: "John"});
+      expect(res.status).toBe(401);
+    })
+  })
 });

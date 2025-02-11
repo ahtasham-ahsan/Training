@@ -16,3 +16,14 @@ package-lock.json
 12_Unit_Testing/node_modules
 12_Unit_Testing/package-lock.json
 NextJS/
+
+13_INTEGRATION_TESTING/config/
+13_INTEGRATION_TESTING/middleware/
+13_INTEGRATION_TESTING/models/
+13_INTEGRATION_TESTING/routes/
+13_INTEGRATION_TESTING/startup/
+13_INTEGRATION_TESTING/tests/
+13_INTEGRATION_TESTING/index.js
+13_INTEGRATION_TESTING/logfile.log
+13_INTEGRATION_TESTING/package-lock.json
+13_INTEGRATION_TESTING/package.json

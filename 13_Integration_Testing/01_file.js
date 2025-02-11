@@ -22,6 +22,14 @@ app.get("/", async (req, res) => {
   res.send(resp);
 });
 
+app.get("/user/:id", async (req, res) => {
+  const id = await test_Model.findById(req.params.id);
+  if (!id) {
+    return res.status(404);
+  }
+  return res.send(id);
+});
+
 app.post("/add", async (req, res) => {
   const name = req.body.name;
   const email = req.body.email;

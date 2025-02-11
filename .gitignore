@@ -20,6 +20,7 @@ Genre/
 13_Integration_Testing/node_modules
 13_Integration_Testing/package.json
 13_Integration_Testing/package-lock.json
+13_Integration_Testing/coverage/
 
 # 13_INTEGRATION_TESTING/config/
 # 13_INTEGRATION_TESTING/middleware/

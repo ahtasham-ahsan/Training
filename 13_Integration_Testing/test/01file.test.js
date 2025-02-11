@@ -43,6 +43,12 @@ describe("apis testing", () => {
     it("should return 401 if users is not logged in ", async()=>{
       const res = await request(server).post("/user").send({name: "John"});
       expect(res.status).toBe(401);
-    })
+    });
+
+    it("should return 400 if users is less than 3 characters ", async()=>{
+      const res = await request(server).post("/user").send({name: "John"});
+      expect(res.status).toBe(401);
+    });
+
   })
 });

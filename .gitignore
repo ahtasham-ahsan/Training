@@ -25,14 +25,7 @@ Genre/
 14_Test_Driven_Development/package.json
 14_Test_Driven_Development/package-lock.json
 14_Test_Driven_Development/node_modules/
-# 13_INTEGRATION_TESTING/config/
-# 13_INTEGRATION_TESTING/middleware/
-# 13_INTEGRATION_TESTING/models/
-# 13_INTEGRATION_TESTING/routes/
-# 13_INTEGRATION_TESTING/startup/
-# 13_INTEGRATION_TESTING/tests/
-# 13_INTEGRATION_TESTING/index.js
-# 13_INTEGRATION_TESTING/logfile.log
-# 13_INTEGRATION_TESTING/package-lock.json
-# 13_INTEGRATION_TESTING/package.json
-# 13_Integration_Testing
+14_FEB_Friday/node_modules/
+14_FEB_Friday/package-lock.json
+14_FEB_Friday/package.json
+14_FEB_Friday/VE - APIs.pdf

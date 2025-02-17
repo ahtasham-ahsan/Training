@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: API Example with CRUD operations
+  version: 1.0.0
+paths:
+  /:
+    get:
+      summary: Sample API
+      responses:
+        200:
+          description: Greeting responses
+          content:
+            application/json:
+              schema:
+                type: string
+                example: Hello World
+  /items:
+    post:
+      summary: Create an item
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        201:
+          description: Item created
+    get:
+      summary: Get all items
+      responses:
+        200:
+          description: List of items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /items/{id}:
+    get:
+      summary: Get an item by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Item details
+          content:
+            application/json:
+              schema:
+                type: object
+        404:
+          description: Item not found
+    put:
+      summary: Update an item by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Item updated
+        404:
+          description: Item not found
+    delete:
+      summary: Delete an item by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Item deleted
+        404:
+          description: Item not found

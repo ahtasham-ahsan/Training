@@ -7,7 +7,6 @@ import User from '../models/User.js';
 
 const router = express.Router();
 
-// Set up multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/uploads/');
@@ -19,7 +18,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Login route
 router.get('/login', (req, res) => {
   res.render('login');
 });
@@ -51,7 +49,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Signup route
 router.get('/signup', (req, res) => {
   res.render('signup');
 });
@@ -91,8 +88,6 @@ router.post('/signup', upload.single('profileImage'), async (req, res) => {
     res.render('signup', { error: 'An error occurred' });
   }
 });
-
-// Logout route
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
   res.redirect('/auth/login');

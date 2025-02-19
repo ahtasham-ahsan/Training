@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+      <button class="add-todo-btn" onclick="window.location.href='/todo'">
+        Add Todo
+      </button>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% todos.forEach(todo => { %>
+          <tr>
+            <td><%= todo.title %></td>
+            <td><%= todo.description %></td>
+            <td><%= todo.completed ? "Completed" : "Incomplete" %></td>
+            <td>
+              <button
+                onclick="window.location.href='/todos/<%= todo.id %>/edit'"
+              >
+                Update
+              </button>
+              <form action="/todos/<%= todo.id %>/delete" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

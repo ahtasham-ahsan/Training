@@ -64,4 +64,8 @@ TypeScript/practice/
 24_FEB_Monday/TECHNOLOGY.pdf
 24_FEB_Monday/package.json
 24_FEB_Monday/package-lock.json
-React/
+React/Frontend/node_modules
+React/Frontend/package-lock.json
+React/Frontend/README.md 
+React/Frontend/.gitignore
+React/Frontend/vite.config.js

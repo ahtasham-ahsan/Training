@@ -4,6 +4,7 @@ import pdfParse from "pdf-parse";
 import mammoth from "mammoth"; 
 import readline from "readline"; 
 
+
 async function readPDF(filePath) {
     const dataBuffer = fs.readFileSync(filePath);
     const data = await pdfParse(dataBuffer);

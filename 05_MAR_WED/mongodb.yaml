@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  node-app:
+    build: .  # ✅ Ensure this is set to build from the current directory
+    container_name: node-app
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: "mongodb://mongo:27017/mydatabase"
+    ports:
+      - "5050:5050"
+    volumes:
+      - .:/app
+    restart: always
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+
+volumes:
+  mongo-data:

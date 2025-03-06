@@ -86,3 +86,8 @@ practice/03_Folder/
 05_MAR_WED/package.json
 05_MAR_WED/package-lock.json
 05_MAR_WED/node_modules/
+
+06_MAR_THU/node_modules/
+06_MAR_THU/package.json
+06_MAR_THU/package-lock.json
+06_MAR_THU/.env

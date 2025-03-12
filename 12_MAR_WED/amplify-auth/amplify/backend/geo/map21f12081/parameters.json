@@ -1,0 +1,11 @@
+{
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "mapName": "map21f12081",
+  "mapStyle": "VectorEsriDarkGrayCanvas",
+  "isDefault": false
+}

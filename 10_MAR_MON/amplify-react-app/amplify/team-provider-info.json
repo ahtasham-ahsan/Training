@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyreactapp-dev-fbeb0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::519991627391:role/amplify-amplifyreactapp-dev-fbeb0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::519991627391:role/amplify-amplifyreactapp-dev-fbeb0-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyreactapp-dev-fbeb0-deployment",
+      "UnauthRoleName": "amplify-amplifyreactapp-dev-fbeb0-unauthRole",
+      "StackName": "amplify-amplifyreactapp-dev-fbeb0",
+      "StackId": "arn:aws:cloudformation:us-east-2:519991627391:stack/amplify-amplifyreactapp-dev-fbeb0/1f5a4ce0-fd74-11ef-aeda-06c2da7f9d1f",
+      "AmplifyAppId": "d18r49zr13aodg"
+    },
+    "categories": {
+      "auth": {
+        "amplifyreactappd3301374": {}
+      },
+      "api": {
+        "amplifyreactapp": {}
+      }
+    }
+  }
+}

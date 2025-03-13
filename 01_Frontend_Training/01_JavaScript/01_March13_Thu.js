@@ -1,5 +1,3 @@
-const { object } = require("joi");
-
 console.log("\n----------------------- Variables ------------------------\n")
 let experience = false;
 

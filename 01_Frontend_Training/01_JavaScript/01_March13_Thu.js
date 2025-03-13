@@ -39,3 +39,26 @@ console.log(curriedMultiply(2)(3));
 const compose = (f, g) => (a) => f(g(a));
 const sum = (num) => num + 1;
 console.log(compose(sum, sum)(5));
+
+
+// Advanced Arrays
+const arr = [1, 2, 10, 16];
+const double = []
+const newArray = arr.forEach((num) => {
+    double.push(num * 2);
+});
+console.log(double);
+
+// map, filter, reduce
+const mapArr = arr.map((num) => num * 2);
+console.log(mapArr);
+
+const filterArr = arr.filter((num) => num % 2 === 0);
+console.log(filterArr);
+
+const reduceArr = arr.reduce((acc, num) => {
+    console.log("-------------");
+    console.log("--> ", acc, num);
+    return acc + num
+}, 0);
+console.log(reduceArr);

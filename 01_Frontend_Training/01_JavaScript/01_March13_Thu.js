@@ -1,3 +1,16 @@
+let experience = false;
+
+function changeExperience() {
+    let experience = true;
+    console.log("Inside Experience", experience);
+}
+
+changeExperience();
+console.log("Outside Experience", experience); 
+
+const DontChange = "Cant Change";
+console.log(DontChange);
+
 // Arrow Functions
 
 // Closures
@@ -22,3 +35,7 @@ const multiplyBy5 = curriedMultiply(5);
 console.log(multiplyBy5(10));
 console.log(curriedMultiply(2)(3));
 
+// Compose
+const compose = (f, g) => (a) => f(g(a));
+const sum = (num) => num + 1;
+console.log(compose(sum, sum)(5));

@@ -164,3 +164,22 @@ console.log(userEmail2.trimEnd());
 const userProfiles = [['commanderTom', 23], ['derekZlander', 40], ['hansel', 18]];
 const obj4 = Object.fromEntries(userProfiles);
 console.log("--------------------\nObject From Entries \n\n",obj4);
+
+console.log("\n----------------------- FOR LOOP ------------------------\n")
+const basket = ['apples', 'oranges', 'grapes'];
+// Iterating - Over Arrays and Strings
+console.log("For Of Loop");
+for (item of basket){
+    console.log("* ", item);
+}
+
+const detailed_Basket = {
+    apples: 5,
+    oranges: 10,
+    grapes: 1000
+}
+// Enumerating over the properties of the  Objects
+console.log("\nFor In Loop");
+for (item in detailed_Basket){
+    console.log("^ ", item);
+}

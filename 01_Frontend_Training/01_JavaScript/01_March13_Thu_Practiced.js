@@ -1,7 +1,6 @@
-console.log("---------------------------- Expense Tracker --------------------------------");
+console.log("-------------------------< Expense Tracker >-------------------------");
 function ExpenseTracker() {
     let expenses = []; 
-    
     return {
         addExpense: function (amount, category) {
             expenses.push({ amount, category, date: new Date().toLocaleDateString() });

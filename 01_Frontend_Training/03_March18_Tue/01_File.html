@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>CSS Tutorial</title>
+    <style>
+        body{
+            background-image: url('https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+        }
+        h2 {
+            color: red;
+            text-align: center;
+            border: 4px solid green;
+            cursor: pointer;
+        }
+        p {
+            color: rgb(176, 176, 255);
+            text-decoration: underline;
+            text-transform: capitalize;
+            line-height: 1.5;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 150%;
+            font-family: "Roboto Mono", monospace;
+        }
+        img {
+            float: right;
+        }
+        li{
+            list-style: none;
+            display: inline-block   ;
+        }
+        footer {
+            clear: both;
+            text-align: center;
+        }
+        .boxmodel {
+            border: 5px solid red;
+            display: inline-block;
+            padding: 20px;
+            margin: 10px;
+            background-color: yellow;
+            color: blue;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: "Roboto Mono", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="boxmodel">A</div>
+        <div class="boxmodel">B</div>
+        <div class="boxmodel">C</div>
+        <div class="boxmodel">D</div>
+    </section>
+    <section>
+        <h2>About</h2>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="lion picture"  width="300">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum magnam officiis quis quidem non, delectus ipsum mollitia, quam voluptates animi.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2021 CSS Tutorial</p> 
+    </footer>
+</body>
+</html>

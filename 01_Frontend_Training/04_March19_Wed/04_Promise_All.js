@@ -1,12 +1,12 @@
 function runParallel(tasks, limit) {
     return new Promise((resolve) => {
-      let index = 0;  // Keeps track of next task to start
-      let activeCount = 0; // Number of currently running tasks
-      const results = new Array(tasks.length); // Store results in correct order
+      let index = 0; 
+      let activeCount = 0; 
+      const results = new Array(tasks.length); 
   
       function runNext() {
         if (index >= tasks.length && activeCount === 0) {
-          resolve(results); // All tasks are done, resolve the main Promise
+          resolve(results); 
           return;
         }
   
@@ -17,20 +17,19 @@ function runParallel(tasks, limit) {
   
           tasks[taskIndex]()
             .then((result) => {
-              results[taskIndex] = result; // Store result at correct index
+              results[taskIndex] = result;
             })
             .finally(() => {
-              activeCount--; // Mark task as done
-              runNext(); // Start next task
+              activeCount--; 
+              runNext(); 
             });
         }
       }
   
-      runNext(); // Start initial batch of tasks
+      runNext(); 
     });
   }
   
-  // Example Usage:
   const tasks = [
     () => new Promise((res) => setTimeout(() => res("A"), 1000)),
     () => new Promise((res) => setTimeout(() => res("B"), 2000)),
@@ -39,5 +38,5 @@ function runParallel(tasks, limit) {
     () => new Promise((res) => setTimeout(() => res("E"), 3000)),
   ];
   
-  runParallel(tasks, 2).then(console.log); // Expected output: ["A", "B", "C", "D", "E"]
+  runParallel(tasks, 2).then(console.log); 
   
